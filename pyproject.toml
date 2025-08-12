@@ -1,0 +1,13 @@
+[project]
+name = "constructioncrew"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "passlib>=1.7.4",
+    "pyjwt>=2.10.1",
+    "supabase>=2.18.0",
+    "torch>=2.8.0",
+]
