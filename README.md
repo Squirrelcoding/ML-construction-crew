@@ -4,8 +4,8 @@ This is an API for users to collectively build a neural network and test it on a
 
 ## Features
 
-- [ ] Implement JWT and account system
-- [ ] Download and find a way to host the FashionMNIST dataset
+- [ x ] Implement JWT and account system
+- [ ] Find a way to host basic datasets
 - [ ] Add a way to make a new model
 - [ ] Add a way to view all models
 - [ ] Add a layer to a new model
@@ -15,8 +15,10 @@ This is an API for users to collectively build a neural network and test it on a
 	 - [ ] Add arbitrary layer of choice
 	 - [ ] Add basic experiment tracking like MLFlow or wandb
 	 - [ ] Use some streams to let user know whats currently happening
+	 - [ ] Add a way to download a model's state_dict
 - [ ] Add a democratic way to remove a model
 - [ ] Add a way to prevent spamming and basic security
+- [ ] Deploy
 
 ## Tutorial
 
