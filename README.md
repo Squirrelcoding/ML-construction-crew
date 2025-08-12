@@ -10,8 +10,6 @@ This is an API for users to collectively build a neural network and test it on a
 - [ ] Add a way to view all models
 - [ ] Add a layer to a new model
 - [ ] Add a way to deploy and evaluate a model
-	 - [ ] Add linear layer of choice
-	 - [ ] Add relu layer of choice
 	 - [ ] Add arbitrary layer of choice
 	 - [ ] Add basic experiment tracking like MLFlow or wandb
 	 - [ ] Use some streams to let user know whats currently happening

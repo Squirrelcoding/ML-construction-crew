@@ -1,4 +1,5 @@
 from typing import Union
+import torch
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -55,6 +56,8 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 app = FastAPI()
 
+
+
 class DBWrapper():
     def __init__(self, url: str, key: str) -> None:
         self.client: Client = create_client(url, key)
@@ -76,6 +79,8 @@ class DBWrapper():
 url: str = os.environ.get("SUPABASE_URL") # type: ignore
 key: str = os.environ.get("SUPABASE_KEY") #type: ignore
 db = DBWrapper(url, key)
+
+layer_names = dir(torch.nn.modules)
 
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
@@ -191,3 +196,27 @@ class Item(BaseModel):
     name: str
     price: float
     is_offer: Union[bool, None] = None
+
+# Add arbitrary layer to a model
+
+@app.post("/add_layer")
+def add_layer(current_user: Annotated[User, Depends(get_current_active_user)], layer, parameters):
+    # Look up layer in the layer_names
+    # Get the parametesr
+    pass
+
+# Make a new model and store it in supabase
+
+# View all models
+
+# Experiment tracking stream
+
+# Download a model's state_dict
+
+# Some more functionality like PyTorch hooks since thats what we wanna learn here
+
+# Remove model democratically
+
+# Add a way to prevent spam
+
+# Deployment logic??
